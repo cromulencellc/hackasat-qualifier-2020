@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 RUN apt-get update -y; \
     apt-get install -y apache2 python curl; \
     a2enmod cgi; \
-    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py; \
+    curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py; \
     python get-pip.py; \
     pip install skyfield;
 
