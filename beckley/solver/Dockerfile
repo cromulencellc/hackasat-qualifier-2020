@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 #Install Apache, Python, Curl. Enable CGI. Install PIP, use PIP to install skyfield
 RUN apt-get update -y; \
     apt-get install -y python curl python-dev git libssl-dev libffi-dev build-essential; \
-    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py; \
+    curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py; \
     python get-pip.py; \
     pip install skyfield;\
     pip install --upgrade pwntools
